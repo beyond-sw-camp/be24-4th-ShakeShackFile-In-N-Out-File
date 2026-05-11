@@ -58,38 +58,6 @@ FileInNOut는 업무 전환 비용을 줄이기 위해 파일 관리, 문서 협
 
 ## 아키텍처
 
-### 배포 흐름
-
-```mermaid
-flowchart LR
-    Dev["Developer"] --> Git["Git Repository"]
-    Git --> Jenkins["Jenkins Pipeline"]
-    Jenkins --> Build["Gradle / npm Build"]
-    Build --> Kaniko["Kaniko Image Build"]
-    Kaniko --> Registry["Docker Hub Registry"]
-    Jenkins --> Helm["Helm Upgrade / kubectl Patch"]
-    Registry --> K8s["Kubernetes Cluster"]
-    Helm --> K8s
-```
-
-### 런타임 구성
-
-```mermaid
-flowchart TB
-    User["User"] --> Ingress["Nginx Ingress / TLS"]
-    Ingress --> Frontend["Frontend: Vue + Nginx"]
-    Ingress --> Backend["Backend: Spring Boot API"]
-    Ingress --> Realtime["WebSocket Server: Yjs"]
-
-    Frontend --> Backend
-    Frontend --> Realtime
-    Backend --> MariaDB["MariaDB StatefulSet"]
-    Backend --> Redis["Redis StatefulSet"]
-    Realtime --> Redis
-    Backend --> ObjectStorage["MinIO / S3 Object Storage"]
-```
-
-시스템 아키텍처 이미지는 아래 문서에도 포함되어 있습니다.
 
 <div align="center">
   <img src="backend/images/fileinnout.system_architecture.png" alt="FileInNOut System Architecture" width="900" />
