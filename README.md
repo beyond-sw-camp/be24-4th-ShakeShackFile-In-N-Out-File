@@ -317,3 +317,7 @@ npm run build
 - OpenTelemetry Collector와 Jaeger 연동 구체화
 - 이미지 취약점 스캔과 SBOM 생성 단계 추가
 - Argo CD 기반 GitOps 배포 흐름으로 확장
+
+## 배포 테스트
+
+<img width="1918" height="906" alt="blue_green" src="https://github.com/user-attachments/assets/c7277fa9-9027-4dfe-8772-2aafdd148eb5" />
