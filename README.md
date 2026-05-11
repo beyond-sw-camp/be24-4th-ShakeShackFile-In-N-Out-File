@@ -320,4 +320,4 @@ npm run build
 
 ## 배포 테스트
 
-<img width="1918" height="906" alt="blue_green" src="https://github.com/user-attachments/assets/c7277fa9-9027-4dfe-8772-2aafdd148eb5" />
+<img width="1024" height="456" alt="blue_green" src="https://github.com/user-attachments/assets/c7277fa9-9027-4dfe-8772-2aafdd148eb5" />
